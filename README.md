@@ -13,4 +13,6 @@ Include the password for that email as a string called serverPass
 
 Inclue a link to your family's ideas sheet as familyLink
 
+Include one less than the size of your family as familySize
+
 **TODO: put in an example family.py** 
