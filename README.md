@@ -11,4 +11,6 @@ Include the email you want assignments to be sent from as a string called server
 
 Include the password for that email as a string called serverPass
 
+Inclue a link to your family's ideas sheet as familyLink
+
 **TODO: put in an example family.py** 
