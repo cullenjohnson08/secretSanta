@@ -3,21 +3,21 @@
 
 ## Create a family.py that contains:
 
-A list of tuples(string,string) with ("name", "email address") called **family**
+A list of tuples(string,string) with ("name", "email address") called **__family__**
 
-A list of tuples(string,string) that contains couples that you don't want to get eachother ex: ("mom", "dad"), called **couples**
+A list of tuples(string,string) that contains couples that you don't want to get eachother ex: ("mom", "dad"), called **__couples__**
 
-Include a max amount to be spent on each person as an int called capAmount
+Include a max amount to be spent on each person as an int called **__capAmount__**
 
-Include the email you want assignments to be sent from as a string called serverEmail
+Include the email you want assignments to be sent from as a string called **__serverEmail__**
 
-Include the password for that email as a string called **serverPass**
+Include the password for that email as a string called **__serverPass__**
 
-Inclue a string of link to your family's ideas sheet as **familyLink**
+Inclue a string of link to your family's ideas sheet as **__familyLink__**
 
-Include an integer that is one less than the size of your family as **familySize**
+Include an integer that is one less than the size of your family as **__familySize__**
 
-Include a string of the current year as **year**
+Include a string of the current year as **__year__**
 
 ## Please reference exampleFamily.py for a template
 
