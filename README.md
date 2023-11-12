@@ -1,7 +1,7 @@
 # secretSanta
-## A script to automate a secret santa draw
+### A script to automate a secret santa draw
 
-### Create a family.py that contains:
+## Create a family.py that contains:
 
 A list of tuples(string,string) with ("name", "email address") called **family**
 
@@ -19,6 +19,6 @@ Include an integer that is one less than the size of your family as **familySize
 
 Include a string of the current year as **year**
 
-#### Please reference exampleFamily.py for a template
+## Please reference exampleFamily.py for a template
 
-##### This currently works with gmail as of November 2023
+### This currently works with gmail as of November 2023
