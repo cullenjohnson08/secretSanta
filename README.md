@@ -1,24 +1,24 @@
 # secretSanta
-### A script to automate a secret santa draw
+#### A script to automate a secret santa draw
 
 ## Create a family.py that contains:
 
-A list of tuples(string,string) with ("name", "email address") called **_family_**
++ **_family_** - A list of tuples(string,string) with the name and email of each family member. _ex: ("name", "email address")_
 
-A list of tuples(string,string) that contains couples that you don't want to get eachother ex: ("mom", "dad"), called **_couples_**
++ **_couples_** - A list of tuples(string,string) that contains couples that you don't want to get eachother. _ex: ("mom", "dad")_
 
-Include a max amount to be spent on each person as an int called **_capAmount_**
++ **_capAmount_** -  An integer containing the max amount to be spent on each person.
 
-Include the email you want assignments to be sent from as a string called **_serverEmail_**
++ **_serverEmail_** - A string containing he email you want assignments to be sent from.
 
-Include the password for that email as a string called **_serverPass_**
++ **_serverPass_** - A string containing the password for that email address. 
 
-Inclue a string of link to your family's ideas sheet as **_familyLink_**
++ **_familyLink_** -  A string containing the link to a shared document with your family's gift ideas and links.
 
-Include an integer that is one less than the size of your family as **_familySize_**
++ **_familySize_** - An integer that is one less than the size of your family. 
 
-Include a string of the current year as **_year_**
++ **_year_** - A string of the current year. 
 
-## Please reference exampleFamily.py for a template
+### Please reference exampleFamily.py for a template
 
-### This currently works with gmail as of November 2023
+##### This currently works with gmail as of November 2023
