@@ -16,7 +16,7 @@ def generateEmailText(giverName, receiverName):
     return body
 
 def sendEmail(giver, receiver):
-    subject = "**TOP Secret** Your 2022 Secret Santa Assignment **Top Secret**"
+    subject = "**TOP Secret** Your " + year + " Secret Santa Assignment **Top Secret**"
     content = generateEmailText(giver[0], receiver[0])
     with yagmail.SMTP(serverEmail, serverPass) as yag:
         yag.send(giver[1], subject, content)
