@@ -6,7 +6,7 @@ from time import sleep
 
 sent = []
 
-print("Hello there again my friend")
+print("Another year, another heap of bugs to circumvent google security")
 
 def generateEmailText(giverName, receiverName):
     body1 = "Hi, " + giverName + "!\n\n"
@@ -53,3 +53,4 @@ def assignAndSend():
     sent.append(family[0][0])
     random.shuffle(sent)
     print(sent)
+    print("Above are those that are getting gifts")
