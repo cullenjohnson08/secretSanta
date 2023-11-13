@@ -2,8 +2,11 @@ from family import *
 import smtplib
 import random
 import yagmail
+from time import sleep
 
-sent = ["hello"]
+sent = []
+
+print("Hello there again my friend")
 
 def generateEmailText(giverName, receiverName):
     body1 = "Hi, " + giverName + "!\n\n"
@@ -20,6 +23,7 @@ def sendEmail(giver, receiver):
     content = generateEmailText(giver[0], receiver[0])
     with yagmail.SMTP(serverEmail, serverPass) as yag:
         yag.send(giver[1], subject, content)
+    sleep(10)
     return receiver[0]
 
 def coupleChecker():
