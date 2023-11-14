@@ -2,9 +2,14 @@ from family import *
 import smtplib
 import random
 import yagmail
-from time import sleep
+from time import sleep,strftime
+
 
 sent = []
+
+familySize = len(family)-1
+
+year = strftime('%Y')
 
 print("Another year, another heap of bugs to circumvent google security")
 

@@ -11,14 +11,11 @@
 
 + **_serverEmail_** - A string containing he email you want assignments to be sent from.
 
-+ **_serverPass_** - A string containing the password for that email address. 
++ **_serverPass_** - A string containing the password for that email address.
 
 + **_familyLink_** -  A string containing the link to a shared document with your family's gift ideas and links.
-
-+ **_familySize_** - An integer that is one less than the size of your family. 
-
-+ **_year_** - A string of the current year. 
 
 ### Please reference exampleFamily.py for a template
 
 ##### This currently works with gmail as of November 2023
+
