@@ -9,17 +9,16 @@ sent = []
 print("Another year, another heap of bugs to circumvent google security")
 
 def generateEmailText(giverName, receiverName):
-    body1 = "Hi, " + giverName + "!\n\n"
-    body2 = "This is an automated email to inform you that you have been tasked to buy a gift for " + receiverName + "!\n\n"
-    body3 = "Please remember:\n1. Keep this information strictly confidential!\n2. Don't drastically exceed the spending limit of $" + str(capAmount)
-    body4 = "!\n\nA list of nifty gift ideas can be found at: (make sure to put in what you want, if you haven't already!)\n" + familyLink + "\n"
-    body5 = "\n\nDon't be the one that ruins Chrismas this year!\n\n\n"
-    body6 = "Best Wishes!\nYour friendly neighborhood santaBot (aka SkyNet)"
-    body = body1 + body2 + body3 + body4 + body5 + body6
+    body = "Hi, " + giverName + "!\n\n"
+    body += "This is an automated email to inform you that you have been tasked to buy a gift for " + receiverName + "!\n\n"
+    body += "Please remember:\n1. Keep this information strictly confidential!\n2. Don't drastically exceed the spending limit of $" + str(capAmount)
+    body += "!\n\nA list of nifty gift ideas can be found at: (make sure to put in what you want, if you haven't already!)\n" + familyLink + "\n"
+    body += "\n\nDon't be the one that ruins Chrismas this year!\n\n\n"
+    body += "Best Wishes!\nYour friendly neighborhood santaBot (aka SkyNet)"
     return body
 
 def sendEmail(giver, receiver):
-    subject = "**TOP Secret** Your " + year + " Secret Santa Assignment **Top Secret**"
+    subject = "**TOP SECRET** Your " + year + " Secret Santa Assignment **TOP SECRET**"
     content = generateEmailText(giver[0], receiver[0])
     with yagmail.SMTP(serverEmail, serverPass) as yag:
         yag.send(giver[1], subject, content)
