@@ -23,7 +23,3 @@ serverEmail = "myFamilySantaBot@gmail.com"
 serverPass = "Password1234!@#$"
 
 familyLink = "https://docs.google.com/document/d/DOC/OF/WHAT/PEOPLE/WANT"
-
-familySize = 7
-
-year = "1984"
