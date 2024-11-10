@@ -27,7 +27,7 @@ def sendEmail(giver, receiver):
     content = generateEmailText(giver[0], receiver[0])
     with yagmail.SMTP(serverEmail, serverPass) as yag:
         yag.send(giver[1], subject, content)
-    sleep(10)
+    sleep(20)
     return receiver[0]
 
 def coupleChecker():
@@ -35,11 +35,11 @@ def coupleChecker():
     for person in family[:familySize]:
         if ((person[0], family[family.index(person)+1][0])) in couples:
             bool = True
-        if ((family[family.index(person)+1][0], person[0])) in couples:
+        elif ((family[family.index(person)+1][0], person[0])) in couples:
             bool = True
     if ((family[familySize][0], family[0][0])) in couples:
         bool = True
-    if ((family[0][0], family[familySize],[0])) in couples:
+    elif ((family[0][0], family[familySize],[0])) in couples:
         bool = True
     return bool
 
@@ -48,6 +48,7 @@ def assignAndSend():
     random.shuffle(family)
     while (coupleChecker() == True):
         print("couple checker failed, randomizing.......")
+        print(family)
         random.shuffle(family)
     for person in family[:familySize]:
         sendEmail(person, family[family.index(person)+1])
