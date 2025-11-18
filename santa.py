@@ -13,6 +13,12 @@ year = strftime('%Y')
 
 print("Another year, another heap of bugs to circumvent google security")
 
+def generateTestEmail(giverName, receiverName):
+    body = "Hi, " + giverName + "!\n\n"
+    body += "This is a TEST email to ensure server functionality, if it weren't a test you would be assigned " + receiverName + "!\n\n"
+    body += "Thank you for your attention to this matter\n\n  <3 Cullen"
+    return body
+
 def generateEmailText(giverName, receiverName):
     body = "Hi, " + giverName + "!\n\n"
     body += "This is an automated email to inform you that you have been tasked to buy a gift for " + receiverName + "!\n\n"
@@ -21,6 +27,14 @@ def generateEmailText(giverName, receiverName):
     body += "\n\nDon't be the one that ruins Chrismas this year!\n\n\n"
     body += "Best Wishes!\nYour friendly neighborhood santaBot (aka SkyNet)"
     return body
+
+def sendTestEmail(giver, receiver):
+    subject = "**TEST** This is your " + year + " TEST Email **TEST**"
+    content = generateTestEmail(giver[0], receiver[0])
+    with yagmail.SMTP(serverEmail, serverPass) as yag:
+        yag.send(giver[1], subject, content)
+    sleep(20)
+    return receiver[0]
 
 def sendEmail(giver, receiver):
     subject = "**TOP SECRET** Your " + year + " Secret Santa Assignment **TOP SECRET**"
@@ -45,6 +59,22 @@ def coupleChecker():
 
 
 def assignAndSend():
+    random.shuffle(family)
+    while (coupleChecker() == True):
+        print("couple checker failed, randomizing.......")
+        print(family)
+        random.shuffle(family)
+    for person in family[:familySize]:
+        sendEmail(person, family[family.index(person)+1])
+        sent.append(family[family.index(person)+1][0])
+
+    sendTestEmail(family[familySize], family[0])
+    sent.append(family[0][0])
+    random.shuffle(sent)
+    print(sent)
+    print("Above are those that are getting gifts")
+
+def Test():
     random.shuffle(family)
     while (coupleChecker() == True):
         print("couple checker failed, randomizing.......")
