@@ -25,7 +25,7 @@ def generateEmailText(giverName, receiverName):
     body += "Please remember:\n1. Keep this information strictly confidential!\n2. Don't drastically exceed the spending limit of $" + str(capAmount)
     body += "!\n\nA list of nifty gift ideas can be found at: (make sure to put in what you want, if you haven't already!)\n" + familyLink + "\n"
     body += "\n\nDon't be the one that ruins Chrismas this year!\n\n\n"
-    body += "Best Wishes!\nYour friendly neighborhood santaBot (aka SkyNet)"
+    body += "Best Wishes!\nYour friendly neighborhood santaBot"
     return body
 
 def sendTestEmail(giver, receiver):
@@ -68,7 +68,7 @@ def assignAndSend():
         sendEmail(person, family[family.index(person)+1])
         sent.append(family[family.index(person)+1][0])
 
-    sendTestEmail(family[familySize], family[0])
+    sendEmail(family[familySize], family[0])
     sent.append(family[0][0])
     random.shuffle(sent)
     print(sent)
@@ -81,10 +81,10 @@ def Test():
         print(family)
         random.shuffle(family)
     for person in family[:familySize]:
-        sendEmail(person, family[family.index(person)+1])
+        sendTestEmail(person, family[family.index(person)+1])
         sent.append(family[family.index(person)+1][0])
 
-    sendEmail(family[familySize], family[0])
+    sendTestEmail(family[familySize], family[0])
     sent.append(family[0][0])
     random.shuffle(sent)
     print(sent)
