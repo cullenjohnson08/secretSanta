@@ -9,7 +9,7 @@
 
 + **_capAmount_** -  An integer containing the max amount to be spent on each person.
 
-+ **_serverEmail_** - A string containing he email you want assignments to be sent from.
++ **_serverEmail_** - A string containing the email you want assignments to be sent from.
 
 + **_serverPass_** - A string containing the password for that email address.
 
