@@ -16,7 +16,7 @@ print("Another year, another heap of bugs to circumvent google security")
 def generateTestEmail(giverName, receiverName):
     body = "Hi, " + giverName + "!\n\n"
     body += "This is a TEST email to ensure server functionality, if it weren't a test you would be assigned " + receiverName + "!\n\n"
-    body += "Thank you for your attention to this matter\n\n  <3 Cullen"
+    body += "Thank you for your attention to this matter"
     return body
 
 def generateEmailText(giverName, receiverName):
