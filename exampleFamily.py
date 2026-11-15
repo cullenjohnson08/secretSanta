@@ -16,6 +16,17 @@ couples = [
     ("Jane", "Kathy")
     ]
 
+lastYear = [
+    ("Tom", "Mom"),
+    ("Sally", "Dad"),
+    ("Mom", "Timmy"),
+    ("Dad", "Jane"),
+    ("Timmy", "Kathy"),
+    ("Jane", "Max"),
+    ("Kathy", "Tom"),
+    ("Max", "Sally"),
+    ]
+
 capAmount = 1000
 
 serverEmail = "myFamilySantaBot@gmail.com"
