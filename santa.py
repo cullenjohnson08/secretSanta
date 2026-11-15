@@ -27,7 +27,10 @@ def generate_test_email(name):
     return (
         f"Hi, {name}!\n\n"
         "This is a test email from santaBot.\n\n"
-        "Please give a thumbs up in the family group chat if you received this.\n"
+        "Please give a thumbs up in the family group chat if you received this.\n\n"
+        "Please start thinking about what you want and add your gift ideas to "
+        "the family wish list:\n"
+        f"{familyLink}\n"
     )
 
 
@@ -57,7 +60,7 @@ def send_mail(to_email, subject, content):
 
 
 def send_test_email(person):
-    send_mail(person[1], "SANTA TEST", generate_test_email(person[0]))
+    send_mail(person[1], f"SANTA TEST {YEAR}", generate_test_email(person[0]))
 
 
 def send_assignment_email(giver, receiver):

@@ -1,3 +1,6 @@
+# Copy this file to family.py and fill in your family's details.
+# Do not commit family.py.
+# Year is not stored here; santa.py uses the current calendar year.
 
 family = [
     ("Tom", "tom@gmail.com"),
@@ -10,12 +13,16 @@ family = [
     ("Max", "max@protonmail.com")
     ]
 
+# People who should not get each other, either direction.
 couples = [
     ("Tom", "Sally"),
     ("Mom", "Dad"),
     ("Jane", "Kathy")
     ]
 
+# (giver, receiver) from last year. One-way: Tom got Mom last year, so Tom
+# cannot get Mom this year, but Mom can get Tom.
+# --send overwrites this list after all assignment emails succeed.
 lastYear = [
     ("Tom", "Mom"),
     ("Sally", "Dad"),
