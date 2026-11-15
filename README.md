@@ -19,7 +19,7 @@ Do not put a year in `family.py`. The script uses the current calendar year in e
 
 + **_serverPass_** - A string containing the password for that email address. For Gmail this should be an app password.
 
-+ **_familyLink_** -  A string containing the link to a shared document with your family's gift ideas and links. Included in `--dry-run` and `--send` emails.
++ **_familyLink_** -  A string containing the link to a shared document with your family's gift ideas and links. Included in `--dry-run`, `--test-email`, and `--send` emails.
 
 ### Please reference exampleFamily.py for a template
 
@@ -30,11 +30,14 @@ python santa.py
 python santa.py --dry-run
 python santa.py --send
 python santa.py --test-algo
+python santa.py --test-email NAME
 ```
 
 These flags are mutually exclusive. Running with no flags prints usage and exits.
 
 `--dry-run` sends a test email to each real address in `family`. It does not draw or include an assignment. The subject is `SANTA TEST` plus the current year (for example `SANTA TEST 2026`). The body asks people to thumbs-up the family group chat if they received it, and to add gift ideas to the wish list at `familyLink`. There is a 20 second delay between emails.
+
+`--test-email NAME` sends that same test email to one family member. `NAME` must match a name in `family` (case-insensitive).
 
 `--send` draws a circular assignment that avoids couples and last year's pairs, emails everyone, then writes this year's pairs into `lastYear` in `family.py`. It does not print who got whom. There is a 20 second delay between emails.
 

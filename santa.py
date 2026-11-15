@@ -116,6 +116,21 @@ def write_last_year(pairs, path=FAMILY_PATH):
     family_file.write_text(text)
 
 
+def find_person(name):
+    matches = [person for person in family if person[0].lower() == name.lower()]
+    if not matches:
+        known = ", ".join(person[0] for person in family)
+        raise SystemExit(f"Unknown family member {name!r}. Known names: {known}")
+    return matches[0]
+
+
+def test_email(name):
+    person = find_person(name)
+    print(f"Sending test email to {person[0]}")
+    send_test_email(person)
+    print("Test email sent")
+
+
 def dry_run():
     total = len(family)
     print(f"Sending test emails to {total} people")
@@ -212,6 +227,11 @@ def parse_args():
         action="store_true",
         help="Draw 10 assignments and confirm none violate couple or last-year rules",
     )
+    group.add_argument(
+        "--test-email",
+        metavar="NAME",
+        help="Send a test email to one family member with no assignment",
+    )
     return parser.parse_args()
 
 
@@ -224,6 +244,8 @@ def main():
     elif args.test_algo:
         if not test_algo():
             sys.exit(1)
+    elif args.test_email:
+        test_email(args.test_email)
 
 
 if __name__ == "__main__":
